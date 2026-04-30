@@ -10,4 +10,5 @@ $routes->get('', 'Home::login');
 $routes->get('crud', 'Crud::index');
 $routes->get('crud-create', 'Crud::create');
 $routes->post('crud-create', 'Crud::save');
-$routes->get('login', 'Home::login');  
+$routes->get('signup', 'Home::signup');  
+$routes->get('signin', 'Home::signin');  

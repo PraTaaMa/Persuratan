@@ -25,7 +25,7 @@
                 <div class="container-fluid px-4 px-lg-0">
                     <h1 class="fst-italic lh-1 mb-4">Our Website is Coming Soon</h1>
                     <p class="mb-5">We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!</p>
-                    <a href="<?= base_url() ?>index.php/login" class="button">Login</a>
+                    <a href="<?= base_url() ?>index.php/signup" class="button">Login</a>
                 </div>
             </div>
         </div>
