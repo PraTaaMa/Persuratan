@@ -33,25 +33,45 @@ class Crud extends BaseController
         return view('crud/create', $data);
     }
 
-
-
-        public function save()
+    public function save()
     {
-        $this->crud_model->save([
-            'no_id' => $this->request->getVar('no_id'),
-            'asalSurat' => $this->request->getVar('asalSurat'),
-            'ni_AsalSurat' => $this->request->getVar('ni_AsalSurat'),
-            'namaPengirim' => $this->request->getVar('namaPengirim'),
-            'emailPengirim' => $this->request->getVar('emailPengirim'),            
-            'noTelpSender' => $this->request->getVar('noTelpSender'),
-            'noTelpCorp' => $this->request->getVar('noTelpCorp'),
-            'sifatDoc' => $this->request->getVar('sifatDoc'),
-            'noSurat' => $this->request->getVar('noSurat'),            
-            'perihal' => $this->request->getVar('perihal'),
-            'tujuanSurat' => $this->request->getVar('tujuanSurat')
-        ]);
-        session()->setFlashdata('success','data berhasil di tambahkan');
-        return redirect()->to('/crud');
+    $file = $this->request->getFile('file_pdf');
+
+    $namaFile = null;
+
+    if ($file && $file->isValid() && !$file->hasMoved()) {
+
+        // Validasi hanya PDF
+        if ($file->getExtension() != 'pdf') {
+            return "File harus PDF!";
+        }
+
+        // Rename biar unik
+        $namaFile = $file->getRandomName();
+
+        // Pindahkan ke folder uploads
+        $file->move('uploads', $namaFile);
+    }
+
+    $this->crud_model->save([
+        'no_id' => $this->request->getVar('no_id'),
+        'asalSurat' => $this->request->getVar('asalSurat'),
+        'ni_AsalSurat' => $this->request->getVar('ni_AsalSurat'),
+        'namaPengirim' => $this->request->getVar('namaPengirim'),
+        'emailPengirim' => $this->request->getVar('emailPengirim'),            
+        'noTelpSender' => $this->request->getVar('noTelpSender'),
+        'noTelpCorp' => $this->request->getVar('noTelpCorp'),
+        'sifatDoc' => $this->request->getVar('sifatDoc'),
+        'noSurat' => $this->request->getVar('noSurat'),            
+        'perihal' => $this->request->getVar('perihal'),
+        'tujuanSurat' => $this->request->getVar('tujuanSurat'),
+
+        // ⬇️ Tambahan penting
+        'file_pdf' => $namaFile
+    ]);
+
+    session()->setFlashdata('success','data berhasil di tambahkan');
+    return redirect()->to('/reads');
     }
     
 }

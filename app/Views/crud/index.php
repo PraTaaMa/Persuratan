@@ -3,7 +3,7 @@
 
 <div class="card">
         <div class="card-body">
-            <a href="crud-create">
+            <a href="creates">
             <button type="button" class="btn btn-primary">Tambah Data</button>
             </a>
             <hr>

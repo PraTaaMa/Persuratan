@@ -20,6 +20,6 @@ class CrudModel extends Model
 		'sifatDoc',
 		'noSurat',
 		'perihal',
-		'tujuanSurat'
+		'tujuanSurat',
 	];
 }

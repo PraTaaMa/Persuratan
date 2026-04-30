@@ -2,7 +2,7 @@
 <?= $this->section('content'); ?>
 
     <div class="card">
-    <form action="crud-create" method="POST" enctype="multipart/form-data">
+    <form action="reads" method="POST" enctype="multipart/form-data">
        
         <div class="card-body">
         <h2>Informasi Pengirim</h2>
@@ -59,13 +59,9 @@
         <h2>Informasi Surat</h2>
             <hr>
 
-            <!--
-
                 <label for="fileSurat">Upload Surat</label>
                 <input type="file" name="file_pdf" accept=".pdf" required>
-                <button type="submit">Upload</button>                
-            </form>
-            -->   
+
             <div class="mb-3">
                 <label class="form-label">No Surat</label>
                 <input type="text" class="form-control" name="noSurat" placeholder="No Surat *">

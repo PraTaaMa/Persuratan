@@ -6,9 +6,12 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::');
-$routes->get('', 'Home::login');
-$routes->get('crud', 'Crud::index');
-$routes->get('crud-create', 'Crud::create');
-$routes->post('crud-create', 'Crud::save');
-$routes->get('signup', 'Home::signup');  
-$routes->get('signin', 'Home::signin');  
+
+$routes->get('authsup', 'Auth::signup');  
+$routes->get('authsin', 'Auth::signin');  
+
+$routes->get('reads', 'Crud::index');
+$routes->get('creates', 'Crud::create');
+$routes->post('reads', 'Crud::save');
+ 
+

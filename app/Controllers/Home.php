@@ -8,12 +8,4 @@ class Home extends BaseController
     {
         return view('index');
     }
-        public function signup()
-    {
-        return view('signup');
-    }
-        public function signin()
-    {
-        return view('signin');
-    }    
 }
