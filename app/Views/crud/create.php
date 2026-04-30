@@ -78,10 +78,9 @@
                 <label class="form-label" >Ditujukan Kepada</label>
                     <select name="tujuanSurat" id="#">
                     <option value="" disabled selected>Pilih Tujuan Surat</option>
-                    <option value="#">A</option>
-                    <option value="#">B</option>
-                    <option value="#">C</option>
-                    <option value="#">D</option>
+                    <option value="Mentri">Mentri</option>
+                    <option value="Wakil Mentri">Wakil Mentri</option>
+                    <option value="Sekertaris Mentri">C</option>
                 </select>            
             </div>                  
         </div>
