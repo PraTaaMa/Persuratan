@@ -460,3 +460,13 @@ in APPPATH\Controllers\Crud.php on line 55.
  5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  7 SYSTEMPATH\rewrite.php(44): require_once('C:\\PersuratanTU\\public\\index.php')
+CRITICAL - 2026-04-30 17:06:20 --> Error: Class "App\Controllers\UploadModel" not found
+[Method: POST, Route: reads]
+in APPPATH\Controllers\Crud.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Crud->save()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\PersuratanTU\\public\\index.php')

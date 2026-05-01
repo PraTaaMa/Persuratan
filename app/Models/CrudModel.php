@@ -21,5 +21,6 @@ class CrudModel extends Model
 		'noSurat',
 		'perihal',
 		'tujuanSurat',
+		'nama_file',
 	];
 }

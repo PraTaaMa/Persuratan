@@ -7,7 +7,7 @@ use CodeIgniter\Models;
 
 class UploadModel extends Model
 {
-    protected $table = 'filespdf';
+    protected $table = 'surat';
     protected $primaryKey = 'id';
     protected $allowedFields = ['nama_file'];
 }
